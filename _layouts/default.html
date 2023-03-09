@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>{{ page.title }}</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -34,15 +34,7 @@
     </div>
   </header>
   <div class="container">
-    <h2 style="text-align: center;" id="welcome-to-my-blog-">Welcome to my blog 😄</h2>
-
-<p style="text-align: center;"><img class="profilephoto" src="/assets/img/image03.jpg" /><br />
-Hello, my name is Jaehyeong Kim.<br />
-I am an otolaryngology doctor lives in South Korea.<br />
-I wrote my posts for me to remind myself what I’ve learned.<br />
-I hope things on my blog be helpful also to you though there only is quite basic and easy things…🥲<br />
-Thank you for visitting and have a good day.<br /></p>
-
+    {{content}}
   </div>
 
   
