@@ -1,0 +1,18 @@
+<nav class="py-2 bg-light border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
+
+        {% for item in site.data.navigation %}
+        <li class="nav-item">
+          <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %} class="nav-link link-dark px-2">
+            {{ item.name }}
+          </a>
+        </li>
+        {% endfor %}
+        <!-- <li class="nav-item"><a href="index.html" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li> -->
+        <!-- <li class="nav-item"><a href="about.html" class="nav-link link-dark px-2">About</a></li> -->
+        <!-- <li class="nav-item"><a href="posts.html" class="nav-link link-dark px-2">Posts</a></li> -->
+        <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Works</a></li> -->
+      </ul>
+    </div>
+</nav>
