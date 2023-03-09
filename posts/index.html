@@ -1,0 +1,47 @@
+---
+layout: pages
+title: Posts
+---
+<div class="row mb-3">
+  <div class="col-lg-9 col-md-9 col-sm-12">
+    <h1>Posts</h1><br>
+    {% for post in paginator.posts %}
+    <div class="card mb-3 border-0">
+        <div class="row g-0">
+        <div class="col-lg-4 d-flex align-items-center justify-content-center">
+            <img src="{{ root_url }}/assets/img/image02.jpg" class="img-fluid postImages" alt="...">
+        </div>
+        <div class="col-lg-8">
+            <div class="card-body">
+            <h5 class="card-title"><a href="{{ post.url }}" class="text-muted text-decoration-none">{{ post.title }}</a></h5>
+            <p class="card-text">{{ post.content | markdownify | strip_html | truncatewords:75 }}</p>
+            <p class="card-text"><small class="text-muted">Updated on {{ post.date | date_to_string }}</small></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Pagination links -->
+
+    <div class="pagination d-flex justify-content-center">
+      {% if paginator.previous_page %}
+        <a class="btn btn-primary m-3" href="{{ paginator.previous_page_path }}" role="button"><< newer posts</a>
+      {% else %}
+        <button class="btn btn-primary m-3" href="{{ paginator.previous_page_path }}" role="button" disabled><< newer posts</button>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a class="btn btn-primary m-3" href="{{ paginator.next_page_path }}" role="button">older posts >></a>
+      {% else %}
+        <button class="btn btn-primary m-3" href="{{ paginator.previous_page_path }}" role="button" disabled>older posts >></button>
+      {% endif %}
+    </div>
+
+
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-12 ">
+    <div class="bg-light">
+      <h5>Tags</h5>
+    </div>
+  </div>
+</div>

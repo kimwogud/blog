@@ -3,5 +3,10 @@
     height: 20%;
     border-radius: 20%;
     margin: 2rem;
+}
 
+.postImages {
+    border-radius: 5%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }
