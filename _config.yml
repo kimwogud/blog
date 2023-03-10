@@ -6,4 +6,4 @@ plugins:
   - jekyll-paginate
 
 paginate: 3
-paginate_path: "/blog/posts/:num/"
+paginate_path: "/posts/:num/"
